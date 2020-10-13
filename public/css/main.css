@@ -1,11 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  background-origin: border-box;
 }
 
 body {
   height: 100vh; /*vh = viewport height*/
   color: white;
+  background: #ebf2f5;
 }
 
 :root {
@@ -21,8 +23,4 @@ textarea {
   line-height: 1;
   font-weight: 400;
   font-family: "Nunito", sans-serif; */
-}
-
-h1 {
-  color: #ffeab2;
 }
