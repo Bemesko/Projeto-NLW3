@@ -1,0 +1,25 @@
+{
+  "name": "NLW",
+  "version": "1.0.0",
+  "description": "Site/Aplicativo desenvolvido na 3ª edição da Next Level Week, de 12 a 18/10/2020",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bemesko/ProjetoNLW3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bemesko/ProjetoNLW3/issues"
+  },
+  "homepage": "https://github.com/Bemesko/ProjetoNLW3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.5"
+  }
+}
