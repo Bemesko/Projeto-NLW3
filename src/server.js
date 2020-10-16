@@ -5,13 +5,16 @@ const pages = require("./pages.js");
 const server = express();
 
 server
+  .use(express.urlencoded({ extended: true }))
   .use(express.static("public"))
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "hbs")
+  //A partir daqui ficam todas as rotas da aplicação junto com seus métodos
   .get("/", pages.index)
   .get("/orphanage", pages.orphanage)
   .get("/orphanages", pages.orphanages)
-  .get("/create-orphanage", pages.createOrphanage);
+  .get("/create-orphanage", pages.createOrphanage)
+  .post("/save-orphanage", pages.saveOrphanage);
 
 //ligar o servidor
 server.listen(5500);

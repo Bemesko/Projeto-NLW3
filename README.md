@@ -9,3 +9,11 @@ Durante o desenvolvimento eu não quis ficar somente com o que eles passaram pel
 ### Dia 1
 
 - Mudança das cores padrão para fazer um tema escuro na página inicial
+
+### Dia 2
+
+- Mudança das cores da sidebar para manter no tema escuro
+
+### Dia 5
+
+- Teste para ver se o orfanato abre nos fins de semana implementado em 1 linha: `orphanage.open_on_weekends = orphanage.open_on_weekends == "1";`

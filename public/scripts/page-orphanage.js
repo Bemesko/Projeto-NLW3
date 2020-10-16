@@ -6,8 +6,12 @@ const options = {
   zoomControl: false,
 };
 
+//get values from html
+const lat = document.querySelector("span[data-lat]").dataset.lat;
+const lng = document.querySelector("span[data-lng").dataset.lng;
+
 //create map
-const map = L.map("mapid", options).setView([-26.9159725, -49.0773227, 16], 13);
+const map = L.map("mapid", options).setView([lat, lng], 15);
 
 //create and add tile layer
 
@@ -22,7 +26,8 @@ const icon = L.icon({
 });
 
 //create and add marker
-L.marker([-26.9159725, -49.0773227], { icon }).addTo(map);
+
+L.marker([lat, lng], { icon }).addTo(map);
 
 //Image gallery
 
@@ -52,4 +57,17 @@ function selectImage(event) {
 
   // adicionar de volta a classe .active para button
   buttons.classList.add("active");
+}
+
+function validate(event) {
+  //Validar se lat e lng estão preenchidos
+  //pegar o campo com document.querySelector
+  //extrair o value
+  //Ver se o value não está nulo
+
+  const needsLatAndLng = false;
+  if (needsLatAndLng) {
+    event.preventDefault();
+    alert("Selecione um ponto no mapa!");
+  }
 }
