@@ -1,4 +1,8 @@
-const database = require("sqlite-async");
+import { Database } from "sqlite-async";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function execute(db) {
   return db.exec(`
@@ -17,4 +21,4 @@ function execute(db) {
   `);
 }
 
-module.exports = database.open(__dirname + "/database.sqlite").then(execute);
+export default Database.open(__dirname + "/database.sqlite").then(execute);

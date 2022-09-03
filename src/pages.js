@@ -1,7 +1,7 @@
-const database = require("./database/db");
-const saveOrphanage = require("./database/saveOrphanage");
+import database from "./database/db.js";
+import saveOrphanage from "./database/saveOrphanage.js";
 
-module.exports = {
+export default {
   index(req, res) {
     return res.render("index");
   },

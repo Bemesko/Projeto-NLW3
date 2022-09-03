@@ -1,6 +1,10 @@
-const express = require("express");
-const path = require("path");
-const pages = require("./pages.js");
+import express from "express";
+import * as path from "path";
+import pages from "./pages.js";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const server = express();
 
